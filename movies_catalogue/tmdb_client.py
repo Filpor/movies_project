@@ -37,7 +37,7 @@ def get_single_movie_cast(movie_id):
 
 def get_cast(movie_id,how_many):
     data=get_single_movie_cast(movie_id)
-    return data['cast'][:how_many]
+    return data[:how_many]
 
 
 
