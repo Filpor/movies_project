@@ -33,11 +33,11 @@ def get_single_movie_cast(movie_id):
         "Authorization": f"Bearer {API_TOKEN}"
     }
     response = requests.get(endpoint, headers=headers)
-    return response.json()['cast']
+    return response.json()
 
 def get_cast(movie_id,how_many):
     data=get_single_movie_cast(movie_id)
-    return data[:how_many]
+    return data['cast'][:how_many]
 
 
 
